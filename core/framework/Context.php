@@ -1875,7 +1875,7 @@ class Context
 
         Event::createNew('core', 'pre_logout')->trigger();
         self::getResponse()->deleteCookie('THEBUGGENIE');
-        session_regenerate_id(true);
+        session_regenerate_id(); // Not deleting since this is causing a problem with WAMP server
         Event::createNew('core', 'post_logout')->trigger();
     }
 
