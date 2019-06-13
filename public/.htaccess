@@ -1,8 +1,7 @@
 # .htaccess file for The Bug Genie
 
 # Follow symlinks.
-Options +SymlinksIfOwnerMatch
-# Options +FollowSymlinks
+Options +FollowSymlinks
 
 # Apply rewrite rules for pretty URLs.
 <IfModule mod_rewrite.c>
